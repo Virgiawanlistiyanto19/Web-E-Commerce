@@ -11,7 +11,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 <html>
     <head>
         <title>Buy1</title>
-        <link rel="layout/css/productDetails_style.css"/>
+        <link rel="stylesheet" href="layout/css/productDetails_style.css"/>
     </head>
     <body>
       <!-- Menu -->
