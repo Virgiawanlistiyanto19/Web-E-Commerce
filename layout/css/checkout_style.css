@@ -1,0 +1,194 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f3f4f6, #ffffff);
+    color: #333;}
+
+/*menu*/
+  .header {
+    background: linear-gradient(45deg, #e74c3c, #8e44ad);
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+/*Item*/
+ .product-card {
+    margin: 10px;
+    height: 180px;
+    width: 1050px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .product-card img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-card h3 {
+    margin-left: 10px;
+  }
+
+  .product-card p{
+    margin-left: 10px;
+  }
+
+  .price{
+    margin-left: 20px;
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .Deskripsi {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+  }
+
+  button {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  margin: 20px;
+  margin-bottom: 80px;
+  background:linear-gradient(45deg, #e74c3c, #8e44ad); ;
+  border: none;
+  color: white;
+  }
+
+/*Input Alamat*/
+.alamat {
+  display: block;
+  margin: 20px;
+  margin-bottom: 5px;
+  background: linear-gradient(45deg, #e74c3c, #8e44ad);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  color: white;
+  height: 200px;
+}
+.alamat h2 {
+  text-align: center;
+}
+
+form label {
+margin-left: 20px;
+font-weight: bold;
+
+}
+
+form input {
+margin-top: 20px;
+}
+
+/*Metode Pembayaran*/
+.bayar {
+  background: linear-gradient(45deg, #e74c3c, #8e44ad);
+  color: white;
+  margin: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 150px;
+  width: 395px;
+}
+
+.bayar h2 {
+  text-align: center;
+}
+
+.method {
+  text-align: center;
+}
+
+
+/*Kode Promo*/
+.promo{
+  background: linear-gradient(45deg, #e74c3c, #8e44ad);
+  color: white;
+  margin: 10px;
+  margin-left: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 150px;
+  width: 395px;
+}
+
+.promo h2{
+  text-align: center;
+}
+
+  /*footer*/
+  footer {
+    background: linear-gradient(45deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 10px 5px;
+  }
+  footer .icons i {
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  footer .icons i:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+  }
+  .copy {
+    text-align: center;
+  }
+
+  /* checkout container */
+  .buy-now-btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background: linear-gradient(45deg, #e74c3c,  #8e44ad);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 30px;
+    float: right;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+
+  }
+  
+  .buy-now-btn:hover {
+    background: linear-gradient(45deg, #8e44ad, #e74c3c);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .buy-now-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .buy-now-btn:hover i {
+    transform: translateX(5px);
+  }
+
+  #checkout{
+    height: 80px;
+    background: rgb(231, 231, 231);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  }
