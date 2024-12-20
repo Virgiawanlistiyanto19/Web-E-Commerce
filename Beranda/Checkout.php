@@ -1,3 +1,28 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "db_ecommerce";
+
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$productId1 = 1;
+$productId2 = 3;
+
+// Query untuk mengambil harga produk
+$sql = "SELECT productPrice FROM products WHERE productId IN ($productId1, $productId2)";
+$result = $conn->query($sql);
+
+$total = 0;
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $total += $row["productPrice"];
+    }
+} else {
+    echo "Produk tidak ditemukan.";
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,14 +38,35 @@
      <!-- Item 1 -->
      <div style="display: flex;">
      <div class="product-card" data-aos="zoom-in">
-      <img src="d:\GitHub\Web-E-Commerce\Beranda\IMG\Baju.jpg" alt="Product" />
+      <img src="IMG/Celana" alt="Product" />
       <div class="Deskripsi">
-      <h3>Celana</h3>
+      <h3><?php
+$sql = "SELECT productName FROM products WHERE productId = 1";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // Output data
+  $row = mysqli_fetch_assoc($result);
+  echo $row["productName"];
+} else {
+  echo "Barang Kosong";
+}
+?></h3>
       <p style="vertical-align: top; width: 650px;">Celana jeans straight cut dengan potongan yang rapi dan elegan. Bahan d
         enim tebal dan kuat, cocok untuk acara semi-formal. Padukan dengan kemeja dan 
         sepatu pantofel untuk tampilan yang lebih profesional.</p>
         </div>
-      <p class="price" style="text-align: right; margin-top: 80px; margin-left: 30px; margin-right: 10px;">Rp. 130,000</p>
+      <p class="price" style="text-align: right; margin-top: 80px; margin-left: 30px; margin-right: 10px;"><?php
+$sql = "SELECT productPrice FROM products WHERE productId = 1";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  $row = mysqli_fetch_assoc($result);
+  echo "Rp " . number_format($row["productPrice"], 0, ',', '.');
+} else {
+  echo "Harga Tidak Ditemukan";
+}
+?></p>
     </div>
 
     <!--Tambah Barang Button-->
@@ -52,13 +98,34 @@ function decrement1() {
     <div class="product-card" data-aos="zoom-in">
       <img src="d:\GitHub\Web-E-Commerce\Beranda\IMG\Baju.jpg" alt="Product" />
       <div class="Deskripsi">
-      <h3>Baju</h3>
+      <h3><?php
+$sql = "SELECT productName FROM products WHERE productId = 3";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // Output data
+  $row = mysqli_fetch_assoc($result);
+  echo $row["productName"];
+} else {
+  echo "Barang Kosong";
+}
+?></h3>
       <p style="vertical-align: top; width: 650px;">Dapatkan tampilan yang bersih dan elegan dengan kemeja polos terbaru kami. 
         Terbuat dari bahan katun premium yang lembut dan menyerap keringat. 
         Pilihan warna beragam, mulai dari putih klasik hingga warna-warna pastel 
         yang trendy. Desain timeless yang cocok dipadukan dengan berbagai gaya.</p>
     </div>
-    <p class="price" style="text-align: right; margin-top: 80px; margin-left: 30px; margin-right: 10px;">Rp. 105,000</p>
+    <p class="price" style="text-align: right; margin-top: 80px; margin-left: 30px; margin-right: 10px;"><?php
+$sql = "SELECT productPrice FROM products WHERE productId = 3";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  $row = mysqli_fetch_assoc($result);
+  echo "Rp " . number_format($row["productPrice"], 0, ',', '.');
+} else {
+  echo "Harga Tidak Ditemukan";
+}
+?></p>
   </div>
 
   <!--Tambah Barang Button-->
@@ -152,7 +219,7 @@ function decrement2() {
 <!--Checkout Container-->
 <div id="checkout">
   <h2 class="price" style="font-size: 25px; margin-left: 730px; margin-top: 30px;">Total :</h2>
-  <h2 class="price" style="font-size: 25px; margin-top: 30px;">Rp. 235,000</h2>
+  <h2 class="price" style="font-size: 25px; margin-top: 30px;"><?php echo $total; ?></h2>
   <a href="#" class="buy-now-btn">
     Bayar Sekarang </a>
 </div>
