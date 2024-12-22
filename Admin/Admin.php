@@ -206,6 +206,14 @@
                 const response = await fetch('loadUsers.php'); // PHP endpoint
                 const data = await response.text();
                 mainContent.innerHTML = data;
+            } else if (target === 'orders') {
+                const response = await fetch('loadOrders.php'); // PHP endpoint
+                const data = await response.text();
+                mainContent.innerHTML = data;
+            }  else if (target === 'products') {
+                const response = await fetch('loadProducts.php'); // PHP endpoint
+                const data = await response.text();
+                mainContent.innerHTML = data;
             } else {
                 mainContent.innerHTML = `
                     <div class="card">
