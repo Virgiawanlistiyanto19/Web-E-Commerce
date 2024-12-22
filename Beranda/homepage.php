@@ -3,7 +3,7 @@ session_start();
 include 'Koneksi.php';
 // Pastikan session untuk Username ada
 $username = isset($_SESSION['Username']) ? $_SESSION['Username'] : 'Guest';
-$Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,28 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
   </head>
   <body>
     <!-- Header -->
-    <?php include "layout/header.html"?>
+    <header class="header">
+      <div class="logo">Cihuy Store</div>
+      <div class="profile">
+        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" title="Cart"></i>
+        <i class="fas fa-bell" data-bs-toggle="tooltip" title="Notifications"></i>
+        <i class="fas fa-user" 
+          id="profileDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          data-bs-toggle="tooltip"
+          title="<?php echo $username; ?>" 
+      <!-- Tooltip menampilkan email -->
+        </i>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="profileDropdown"
+        >
+          <li><a class="dropdown-item" href="Profile.php">Akun Saya</a></li>
+          <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+        </ul>
+      </div>
+    </header>
 
     <!-- Carousel Section -->
     <section id="carouselSection">
@@ -134,14 +155,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
       <div class="product-grid">
         <!-- Example Product Card -->
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Kaos.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Kaos</h3>
+          <p>Rp. 50.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -151,14 +172,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Buku.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Buku</h3>
+          <p>Rp.30.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -168,14 +189,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Kemeja.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Kemeja</h3>
+          <p>Rp. 100.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -185,14 +206,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Kaos.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Kaos</h3>
+          <p>Rp. 50.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -202,14 +223,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Pulpen.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Pulpen</h3>
+          <p>Rp. 10.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -219,14 +240,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Rok.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Rok</h3>
+          <p>Rp. 90.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -236,14 +257,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Sandal.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Sandal</h3>
+          <p>Rp. 50.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -253,14 +274,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Topi.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Topi</h3>
+          <p>Rp. 75.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -270,14 +291,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Topi.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Topi</h3>
+          <p>Rp. 75.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -287,14 +308,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Sandal.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Sandal</h3>
+          <p>Rp. 50.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -304,14 +325,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now </a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Pulpen.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Pulpen</h3>
+          <p>Rp. 10.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
@@ -321,14 +342,14 @@ $Photo = isset($_SESSION['Photo']) ? $_SESSION['Photo'] : null;
             Buy Now</a>
         </div>
         <div class="product-card" data-aos="zoom-in">
-          <img src="IMG/Baju.jpg" alt="Product 1" />
+          <img src="IMG/Rok.jpg" alt="Product 1" />
           <span
             class="badge bg-success position-absolute"
             style="top: 10px; left: 10px"
             >New</span
           >
-          <h3>Product 1</h3>
-          <p>Rp. 1,000,000</p>
+          <h3>Rok</h3>
+          <p>Rp. 90.000</p>
           <i
             class="fas fa-shopping-cart cart-icon"
             data-bs-toggle="tooltip"
