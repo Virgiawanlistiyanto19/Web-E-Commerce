@@ -1,17 +1,17 @@
 <?php
 // Data produk contoh
 $recommended_products = [
-["name" => "Kaos", "price" => 100000, "image" => "IMG/sepatu.jpeg"], 
-["name" => "Sepatu", "price" => 110000, "image" => "IMG/sepatu.jpeg"], 
-["name" => "Hoodie","price" => 120000, "image" => "IMG/sepatu.jpeg"], 
-["name" => "Celana", "price" => 130000, "image" => "IMG/sepatu.jpeg"], 
-["name" => "Tas", "price" => 140000, "image" => "IMG/sepatu.jpeg"], 
-["name" => "Kacamata", "price" => 150000, "image" => "IMG/sepatu.jpeg"] ]; 
+["name" => "Kaos", "price" => 50000, "image" => "IMG/Kaos.jpg"], 
+["name" => "Buku", "price" => 30000, "image" => "IMG/Buku.jpg"], 
+["name" => "Kemeja","price" => 100000, "image" => "IMG/Kemeja.jpg"], 
+["name" => "Kaos", "price" => 50000, "image" => "IMG/Kaos.jpg"], 
+["name" => "Pulpen", "price" => 10000, "image" => "IMG/Pulpen.jpg"], 
+["name" => "Rok", "price" => 90000, "image" => "IMG/Rok.jpg"] ]; 
 $all_products = [
-["name" => "Baju","price" => 105000, "image" => "IMG/Baju.jpg"], 
-["name" => "Celana","price" => 115000, "image" => "IMG/Baju.jpg"], 
-["name" => "Baju","price" => 130000, "image" => "IMG/Baju.jpg"], 
-["name" => "Celana","price" => 140000, "image" => "IMG/Baju.jpg"], 
+["name" => "Sandal","price" => 50000, "image" => "IMG/Sandal.jpg"], 
+["name" => "Topi","price" => 75000, "image" => "IMG/Topi.jpg"], 
+["name" => "Kemeja","price" => 130000, "image" => "IMG/Kemeja.jpg"], 
+["name" => "Handphone","price" => 5000000, "image" => "IMG/Handphone.jpeg"], 
 ]; ?>
 
 <!DOCTYPE html>
@@ -20,20 +20,9 @@ $all_products = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cihuy Store</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="layout/css/halamanUtama_style.css"/>
   </head>
   <body>
     <?php include "layout/header.html"?>
-
     <div class="container mt-4">
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
     <div class="carousel-inner">
